@@ -12,6 +12,13 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-
+    var arr = [n / 3, n / 4, n - 1];
+    var min = arr[0];
+    for(var i=0; i<arr.length; i++){
+        if(min > arr[i]){
+            min = arr[i];
+        }
+    }
+    return Math.ceil(min);
 };
 
