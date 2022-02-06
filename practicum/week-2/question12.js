@@ -42,5 +42,6 @@ for (let partition of allPartitions("aba")) {
 }
 
 var maxBalanceNumber = function(input) {
-
+  
+  
 };
