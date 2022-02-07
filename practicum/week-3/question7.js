@@ -20,6 +20,6 @@ var transpose = function(M) {
         }
         lst1[i] = lst2
     }
-    console.log(lst1);
+    //console.log(lst1);
     return lst1;
 };
