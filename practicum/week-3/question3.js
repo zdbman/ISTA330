@@ -12,6 +12,9 @@ output: [
 ]
 */
 
-var PascalTriangle = function(n) {
-
+var PascalTriangle = function(n){
+  var lst = [];
+  for(var i=0; i<n; i++){
+    lst[i] = [i+1]
+  }
 };
