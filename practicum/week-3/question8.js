@@ -13,5 +13,31 @@ output: 3
 */
 
 var d_integer = function(input) {
-
+    var dict = {};
+    for(var i=0; i<input.length; i++){
+        if(input[i] in dict){
+            dict[input[i]] += 1;
+        }else{
+            dict[input[i]] = 1;
+        }
+    }
+    var lst = []
+    var c = 0;
+    for(var i in dict){
+        if(i == dict[i]){
+            lst[c] = parseInt(i);
+            c++;
+        }
+    }
+    console.log(lst);
+    if(lst.length == 0){
+        return -1;
+    }
+    var max = lst[0];
+    for(var i=0; i<lst.length; i++){
+        if(max < lst[i]){
+            max = lst[i];
+        }
+    }
+    return max;
 };
