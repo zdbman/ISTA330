@@ -19,11 +19,16 @@ var PascalTriangle = function(n){
   }else{
     lst = [[1]];
   }
+  var count = 2;
   for(var i=1; i<n; i++){
     lst[i] = [];
-    for(var j=0; j<lst[i-1].length+1; j++){
-      
+    for(var j=0; j<count; j++){
+      lst[i][j] = lst[i-1][j] + lst[i-1][j+1]
     }
+    count+=1;
+    /*for(var j=0; j<lst[i-1].length+1; j++){
+      
+    }*/
   }
   
   return lst;
