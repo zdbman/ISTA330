@@ -9,5 +9,9 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
-
+    var count = 0;
+    for(var i=1; i<n; i++){
+        count += (n - i);
+    }
+    return count;
 };
