@@ -25,7 +25,7 @@ var isMonotonic = function(input) {
                 }
             }
             else if(input[0] < input[input.length-1]){//increasing
-                console.log(input[i], input[j]);
+                //console.log(input[i], input[j]);
                 if(input[i] > input[j]){
                     return false;
                 }
