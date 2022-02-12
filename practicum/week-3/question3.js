@@ -13,8 +13,18 @@ output: [
 */
 
 var PascalTriangle = function(n){
-  var lst = [];
-  for(var i=0; i<n; i++){
-    lst[i] = [i+1]
+  var lst = [[]]
+  if(n == 0){
+    return lst;
+  }else{
+    lst = [[1]];
   }
+  for(var i=1; i<n; i++){
+    lst[i] = [];
+    for(var j=0; j<lst[i-1].length+1; j++){
+      
+    }
+  }
+  
+  return lst;
 };
