@@ -10,8 +10,10 @@ Given n, calculate F(n).
 
 var F = function(n) {
     var count = 0;
-    for(var i=1; i<n; i++){
-        count += (n - i);
+    var lst = [0,1];
+    for(var i=2; i<=n; i++){
+        lst[i] = lst[i-2] + lst[i-1]
     }
-    return count;
+    //console.log(lst);
+    return lst[lst.length-1];
 };
