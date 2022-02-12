@@ -12,5 +12,19 @@ output: 2
 */
 
 var m_element = function(input) {
-
+    var dict = {};
+    for(var i=0; i<input.length; i++){
+        if(input[i] in dict){
+            dict[input[i]] += 1;
+        }else{
+            dict[input[i]] = 1;
+        }
+    }
+    console.log(dict);
+    for(var i in dict){
+        if(dict[i] > (input.length / 2)){
+            return parseInt(i);
+        }
+    }
+    return -1;
 };
