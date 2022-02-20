@@ -58,12 +58,12 @@
         for(var i=0; i<2; i++){
             table += "<tr>";
             for(var j=0; j<4; j++){
-                table += "<td>" + flowers[count].name + "</td>";
+                table += "<td onclick='test()'>" + "<img src='" + flowers[count].picture + "' width=100%>" + flowers[count].name + "</td>";
                 count+=1;
             }
             table += "</tr>";
         }
-        document.getElementById("flowersDiv").innerHTML += "<table width=50%>" + table + "</table>"
+        document.getElementById("flowersDiv").innerHTML += "<table width=85%>" + table + "</table>"
     </script>
 </body>
 </html>
