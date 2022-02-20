@@ -100,6 +100,22 @@
             rose,
             waterlily
         ];
+
+        document.getElementById("flowersDiv").innerHTML = "<br>";
+        var count = 0;
+        var table = "";
+        for(var i=0; i<2; i++){
+            table += "<tr>";
+            for(var j=0; j<4; j++){
+                table += "<td onclick='test()'>" + "<img src='" + flowers[count].picture + "' width=100%>" + flowers[count].name + "</td>";
+                count+=1;
+            }
+            table += "</tr>";
+        }
+        document.getElementById("flowersDiv").innerHTML += "<table width=85%>" + table + "</table>"
+
+        
+
     </script>
 </body>
 
