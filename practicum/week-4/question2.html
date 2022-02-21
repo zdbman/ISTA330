@@ -107,14 +107,50 @@
         for(var i=0; i<2; i++){
             table += "<tr>";
             for(var j=0; j<4; j++){
-                table += "<td onclick='test()'>" + "<img src='" + flowers[count].picture + "' width=100%>" + flowers[count].name + "</td>";
+                table += "<td>" + "<img onclick=\"clicked('" + flowers[count].name + "')\" src='" + flowers[count].picture + "' width=100%>" + flowers[count].name + "</td>";
                 count+=1;
             }
             table += "</tr>";
         }
         document.getElementById("flowersDiv").innerHTML += "<table width=85%>" + table + "</table>"
 
-        
+        function clicked(flwr){
+            var lst = [];
+            for(var i=0; i<flowers.length; i++){
+                lst[i] = [flowers[i].name];
+            }
+            lst = lst.sort()
+            //console.log(lst);
+            for(var i=0; i<lst.length; i++){
+                for(var j=0; j<lst.length; j++){
+                    if(lst[j] == flowers[i].name){
+                        lst[j][1] = flowers[i].picture;
+                    }
+                }
+            }
+            console.log(lst);
+            for(var i=0; i<lst.length; i++){
+                if(lst[i][0] == flwr){
+                    var c = lst.slice(i, lst.length);
+                    var f = lst.slice(0, i);
+                }
+            }
+            var sortArr = c.concat(f);
+            console.log(sortArr);
+            const div = document.getElementById("flowersDiv")
+            div.innerHTML = "<br>";
+            var count = 0;
+            var table = "";
+            for(var i=0; i<2; i++){
+                table += "<tr>";
+                for(var j=0; j<4; j++){
+                    table += "<td>" + "<img onclick=\"clicked('" + sortArr[count][0] + "')\" src='" + sortArr[count][1] + "' width=100%>" + sortArr[count][0] + "</td>";
+                    count+=1;
+                }
+                table += "</tr>";
+            }
+            div.innerHTML += "<table width=85%>" + table + "</table>"
+        }
 
     </script>
 </body>
