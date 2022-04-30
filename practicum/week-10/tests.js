@@ -15,7 +15,7 @@ window.onload = () => {
     
     let names = ['Fred', 'John', 'Philip', 'Pablo', 'Toby', 'Rio'];
     let random = Math.floor(Math.random() * names.length);
-    let api = `https://${username}-imagequiz-backend.herokuapp.com`;
+    let api = `https://${username}-imagequiz-api.herokuapp.com`;
     //let api = `http://localhost:4002`;
     let testTaker = names[random];
     let testTakerEmail = testTaker + '@gmail.com';
